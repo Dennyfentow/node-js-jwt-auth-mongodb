@@ -1,0 +1,12 @@
+services:
+  mongodb:
+    image: bitnami/mongodb:latest
+    ports:
+      - 27017:27017
+    env_file:
+      - mongo.env
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
